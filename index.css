@@ -1,0 +1,198 @@
+* {
+  font-size: small;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.6;
+}
+
+.meals-imgs img {
+  border-radius: 5px;
+}
+.wrapper {
+  max-width: 1280px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+#search-btn {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 40px;
+  width: 50px;
+  margin-top: 10px;
+  border: none;
+  background-color: orange;
+  color: white;
+  margin-top: 30px;
+}
+#search-btn i {
+  font-size: 20px;
+}
+#search-btn:hover {
+  background-color: orangered;
+}
+.search {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 700px;
+  margin-right: 0px;
+  height: 40px;
+  padding-left: 10px;
+  margin-top: 30px;
+  border: 2px solid orange;
+  border-right: none;
+  font-size: larger;
+}
+
+.search::placeholder {
+  color: orange;
+  font-size: medium;
+}
+.search:hover {
+  border: 2px solid orangered;
+}
+.meals-result {
+  margin: 50px;
+  padding: 10px;
+  font-size: medium;
+}
+.title1 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.meals-imgs {
+  margin-top: 0px;
+  padding: 5px;
+  margin-bottom: 2px;
+}
+.meals-imgs img {
+  width: 100%;
+  display: block;
+}
+.meals-name {
+  margin: 5px;
+  padding: 2px;
+  margin-bottom: 20px;
+}
+.meals-name a {
+  font-size: medium;
+  margin: 5px;
+  padding: 5px;
+  text-decoration: none;
+  font-weight: normal;
+  color: white;
+  background-color: orangered;
+  border-radius: 20px;
+}
+.meals-name a:hover {
+  background-color: orange;
+}
+.searchbox {
+  display: flex;
+  justify-content: center;
+}
+.meals-item {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 21px -12px rgb(0, 0, 0, 0.79);
+  background-color: white;
+  margin: 2rem 0;
+  padding-left: 0;
+}
+.details {
+  position: fixed;
+  top: 50px;
+  left: 100px;
+  display: none;
+  background-color: orange;
+  border-radius: 1rem;
+  margin: 10px;
+  padding: 10px;
+  overflow-y: scroll;
+  width: 60%;
+  height: 90%;
+  color: white;
+  border: none;
+}
+.details.showRecipe {
+  display: block; /* Show when class is added */
+}
+.details::-webkit-scrollbar {
+  width: 5px;
+}
+.details-content h3 {
+  margin: 10px;
+  padding: 5px;
+  text-decoration: underline;
+}
+.category {
+  font-size: medium;
+  background-color: black;
+  display: inline-block;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+.instruct p {
+  font-size: 15px;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+.recipe-img img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 10px;
+}
+.video a {
+  margin: 5px;
+  padding: 5px;
+  text-decoration: none;
+  font-size: medium;
+  font-weight: bold;
+}
+.recipe-close {
+  position: absolute;
+  right: 50px;
+  border-radius: 50%;
+  border: none;
+}
+.recipe-close i {
+  font-size: medium;
+}
+.notFound {
+  grid-template-columns: 1fr !important;
+  color: orangered;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 100%;
+  margin: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .searchbox {
+    width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .details {
+    width: 540px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .details {
+    width: 700px;
+  }
+}
+@media screen and (min-width: 990px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .details {
+    width: 900px;
+  }
+}
